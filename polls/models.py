@@ -15,7 +15,7 @@ class Question(models.Model):
 
 class Choice(models.Model):
   def __unicode__(self):
-    return "{} {}".format(self.id, self.question_text)
+    return "{} {}".format(self.id, self.choice_text)
   choice_text = models.CharField(max_length=200)
   question = models.ForeignKey(Question)
   votes = models.IntegerField(default=0)
